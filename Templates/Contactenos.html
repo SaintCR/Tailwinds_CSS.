@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Jordan</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="icon" href="../Img/584292c4a6515b1e0ad75aca.png">
+  <style>
+    /* Personalización de estilos para la marca Jordan */
+    .nav-brand {
+      font-family: 'Arial Black', sans-serif;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+    .footer-text {
+      font-family: 'Arial', sans-serif;
+    }
+    /* Estilos adicionales para resaltar campos del formulario */
+    input:focus, textarea:focus {
+      border-color: #4299e1 !important;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Barra de navegación -->
+  <nav class="bg-black py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+      <div>
+        <a href="#" class="text-white text-2xl font-semibold nav-brand">Jordan</a>
+      </div>
+      <div>
+        <a href="Index.html" class="text-gray-300 hover:text-white px-3 py-2">Inicio</a>
+        <a href="#" class="text-gray-300 hover:text-white px-3 py-2">Productos</a>
+        <a href="Contacto.html" class="text-gray-300 hover:text-white px-3 py-2">Contacto</a>
+        <a href="Formulario.html" class="text-gray-300 hover:text-white px-3 py-2">Registro</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido de la página -->
+  <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <div class="p-6">
+        <h1 class="text-3xl font-semibold text-gray-800 mb-4">¡Contáctanos!</h1>
+        <p class="text-gray-600 mb-4">Estamos aquí para ayudarte. Ponte en contacto con nosotros y te responderemos lo antes posible.</p>
+        
+        <!-- Formulario de contacto -->
+        <form action="#" method="POST">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="nombre" class="block text-gray-800 font-semibold mb-2">Nombre</label>
+              <input type="text" id="nombre" name="nombre" class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-600 focus:ring focus:ring-blue-200 focus:ring-opacity-50 focus:outline-none" required>
+            </div>
+            <div>
+              <label for="email" class="block text-gray-800 font-semibold mb-2">Correo Electrónico</label>
+              <input type="email" id="email" name="email" class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-600 focus:ring focus:ring-blue-200 focus:ring-opacity-50 focus:outline-none" required>
+            </div>
+          </div>
+          <div class="mt-4">
+            <label for="mensaje" class="block text-gray-800 font-semibold mb-2">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-600 focus:ring focus:ring-blue-200 focus:ring-opacity-50 focus:outline-none"></textarea>
+          </div>
+          <div class="mt-6">
+            <button type="submit" class="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-900">Enviar Mensaje</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-center items-center">
+      <!-- Contenedor del logo -->
+      <div class="mb-4 sm:mb-0 sm:mr-4">
+        <img src="../Img/gratis-png-ilustracion-de-air-jordan-logo-jumpman-air-jordan-logo-nike-nike-thumbnail-removebg-preview.png" alt="Logo Jordan" class="h-24 mr-2">
+      </div>
+      <!-- Contenedor del texto de Derechos Reservados -->
+      <div class="mb-4 sm:mb-0">
+        <p class="text-gray-500">Derechos Reservados &copy; 2024 Jordan</p>
+      </div>
+    </div>
+    <!-- Enlaces útiles y Síguenos -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-center items-center mt-4">
+      <!-- Enlaces útiles -->
+      <div class="w-full sm:w-auto mb-4 sm:mb-0 sm:mr-4">
+        <h3 class="text-lg font-semibold mb-2">Enlaces útiles</h3>
+        <ul>
+          <li><a href="#" class="text-gray-300 hover:text-white">Acerca de Nosotros</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">Términos y Condiciones</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">Política de Privacidad</a></li>
+        </ul>
+      </div>
+      <!-- Síguenos -->
+      <div class="w-full sm:w-auto">
+        <h3 class="text-lg font-semibold mb-2">Síguenos</h3>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-square"></i></a>
+          <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
