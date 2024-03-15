@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tienda de Artículos Deportivos - Jordan</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="icon" href="../Img/584292c4a6515b1e0ad75aca.png">
   <style>
     /* Personalización de estilos para la marca Jordan */
     .nav-brand {
@@ -14,28 +16,20 @@
     .footer-text {
       font-family: 'Arial', sans-serif;
     }
+    /* Estilo para el carrusel */
     .carousel-container {
       position: relative;
-      width: 80%; /* Ajuste del tamaño del contenedor del carrusel */
-      max-width: 600px; /* Tamaño máximo del contenedor */
-      margin: 0 auto;
+      width: 100%; /* Ancho completo del contenedor */
       overflow: hidden;
-      border-radius: 0.75rem;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     }
     .carousel-slide {
       display: flex;
-      width: 300%; /* Ancho suficiente para todas las imágenes */
-      transition: transform 0.5s ease-in-out; /* Transición de deslizamiento horizontal */
+      transition: transform 0.5s ease-in-out;
+      width: 300%; /* Ancho del contenedor igual a 300% del ancho de una imagen */
     }
     .carousel-slide img {
-      flex: 1;
-      width: 100%;
-      height: 300px; /* Altura específica para todas las imágenes */
-      object-fit: cover; /* Ajuste para asegurar que todas las imágenes tengan el mismo tamaño */
-    }
-    .active {
-      transform: translateX(-33.33%); /* Desplazar la imagen activa a la vista */
+      width: 100%; /* Tamaño completo de la imagen */
+      height: auto;
     }
   </style>
 </head>
@@ -58,27 +52,108 @@
 
   <!-- Carrusel de imágenes de artículos deportivos -->
   <div class="relative bg-gray-300 py-16">
-    <div class="carousel-container">
+    <div class="carousel-container max-w-xl mx-auto">
       <div class="carousel-slide">
         <img src="https://24segons.es/blog/wp-content/uploads/2016/02/image-17.jpg" alt="Jordan 1">
-        <img src="https://24segons.es/blog/wp-content/uploads/2016/02/image-9.jpg" alt="Jordan 2">
+        <img src="https://24segons.es/blog/wp-content/uploads/2016/02/image-1.jpg" alt="Jordan 2">
         <img src="https://24segons.es/blog/wp-content/uploads/2016/02/image-18.jpg" alt="Jordan 3"> 
+      </div>
+      <!-- Botones de desplazamiento -->
+      <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-l-md" onclick="prevSlide()"><</button>
+      <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-r-md" onclick="nextSlide()">></button>
+    </div>
+  </div>
+
+  <!-- Contenido de productos destacados -->
+  <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <h1 class="text-3xl font-semibold text-gray-800 mb-8">Productos Destacados</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Tarjeta de producto -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="https://www.arell.com.co/cdn/shop/products/image_687a03cb-657a-40fa-b68e-2001fa768eb9.jpg?v=1658167928" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h2 class="font-semibold text-lg text-gray-800 mb-2">Jordan Retro 1 - Off White</h2>
+          <p class="text-gray-600">Colaboración entre las marcas Jordan y Off White.</p>
+          <p class="text-gray-800 font-bold mt-2">$99.99</p>
+        </div>
+      </div>
+      <!-- Repite para otros productos -->
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="https://cdn.shopify.com/s/files/1/0006/4353/0817/files/Air_Jordan_3_Retro_SP_J_Balvin_Medellin_Sunset.jpg?height=645&pad_color=fff&v=1708095415&width=645" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h2 class="font-semibold text-lg text-gray-800 mb-2">J Balvin x Jordan Retro 3</h2>
+          <p class="text-gray-600">Colaboración entre el cantante J Balvin y Jordan.</p>
+          <p class="text-gray-800 font-bold mt-2">$99.99</p>
+        </div>
+      </div>
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="https://www.arell.com.co/cdn/shop/products/image_829139c9-8a7d-40e0-a65d-b7dfac176a9e.jpg?v=1658168772" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h2 class="font-semibold text-lg text-gray-800 mb-2">Off White x Jordan 1 </h2>
+          <p class="text-gray-600">Colaboración entre las marcas Jordan y Off White.</p>
+          <p class="text-gray-800 font-bold mt-2">$99.99</p>
+        </div>
+      </div>
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="https://media.gq.com.mx/photos/622a5758408208416bcc452d/master/w_1600,c_limit/tenis-air-jordan-colaboraciones-mas-extranas-raras-jordan-5.jpeg" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h2 class="font-semibold text-lg text-gray-800 mb-2">Trophy Room x Jordan V “Friends and Family”</h2>
+          <p class="text-gray-600">Trophy Room x Jordan V “Friends and Family”</p>
+          <p class="text-gray-800 font-bold mt-2">$99.99</p>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <img src="https://media.gq.com.mx/photos/622a575bea1d03f2815e73d6/master/w_1600,c_limit/tenis-air-jordan-colaboraciones-mas-extranas-raras-union-la-jordan-1.jpeg" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h2 class="font-semibold text-lg text-gray-800 mb-2">Union Los Angeles x Jordan 1</h2>
+          <p class="text-gray-600">Union Los Angeles x Jordan 1</p>
+          <p class="text-gray-800 font-bold mt-2">$99.99</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Contenido adicional de la página -->
-  <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-    <h1 class="text-3xl font-semibold text-gray-800 mb-8">Productos Destacados</h1>
-    <!-- Aquí puedes agregar más contenido, como productos destacados, categorías, etc. -->
-  </div>
-
   <!-- Pie de página -->
-  <footer class="bg-black py-8 mt-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white text-center footer-text">
-      <p>Derechos Reservados &copy; 2024 Jordan</p>
+
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-center items-center">
+      <!-- Contenedor del logo -->
+      <div class="mb-4 sm:mb-0 sm:mr-4">
+        <img src="../Img/gratis-png-ilustracion-de-air-jordan-logo-jumpman-air-jordan-logo-nike-nike-thumbnail-removebg-preview.png" alt="Logo Jordan" class="h-24 mr-2">
+      </div>
+      <!-- Contenedor del texto de Derechos Reservados -->
+      <div class="mb-4 sm:mb-0">
+        <p class="text-gray-500">Derechos Reservados &copy; 2024 Jordan</p>
+      </div>
+    </div>
+    <!-- Enlaces útiles y Síguenos -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-center items-center mt-4">
+      <!-- Enlaces útiles -->
+      <div class="w-full sm:w-auto mb-4 sm:mb-0 sm:mr-4">
+        <h3 class="text-lg font-semibold mb-2">Enlaces útiles</h3>
+        <ul>
+          <li><a href="#" class="text-gray-300 hover:text-white">Acerca de Nosotros</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">Términos y Condiciones</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">Política de Privacidad</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-white">Contáctanos</a></li>
+        </ul>
+      </div>
+      <!-- Síguenos -->
+      <div class="w-full sm:w-auto">
+        <h3 class="text-lg font-semibold mb-2">Síguenos</h3>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-square"></i></a>
+          <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
     </div>
   </footer>
+  
+  
+  
+
 
   <script>
     let slideIndex = 0;
@@ -92,11 +167,19 @@
       showSlide(slideIndex);
     }
 
-    function showSlide(index) {
-      slides.style.transform = `translateX(-${index * 100 / 3}%)`; /* Desplazar las imágenes horizontalmente */
+    function prevSlide() {
+      slideIndex--;
+      if (slideIndex < 0) {
+        slideIndex = slides.children.length - 1;
+      }
+      showSlide(slideIndex);
     }
 
-    setInterval(nextSlide, 2000); // Cambia la imagen cada 5 segundos
+    function showSlide(index) {
+      slides.style.transform = `translateX(-${index * (100 / slides.children.length)}%)`; /* Desplazar las imágenes horizontalmente */
+    }
+
+    setInterval(nextSlide, 3000); // Cambia la imagen cada 3 segundos
   </script>
 </body>
 </html>
