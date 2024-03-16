@@ -7,70 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <link rel="icon" href="../Img/584292c4a6515b1e0ad75aca.png">
-  <style>
-    /* Personalización de estilos para la marca Jordan */
-    .nav-brand {
-      font-family: 'Arial Black', sans-serif;
-      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    }
-    .footer-text {
-      font-family: 'Arial', sans-serif;
-    }
-    /* Estilo para el carrusel */
-    .carousel-container {
-      position: relative;
-      width: 100%; /* Ancho completo del contenedor */
-      overflow: hidden;
-    }
-    .carousel-slide {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      width: 300%; /* Ancho del contenedor igual a 300% del ancho de una imagen */
-    }
-    .carousel-slide img {
-      width: 100%; /* Tamaño completo de la imagen */
-      height: auto;
-    }
-
-    .navbar-toggle {
-      display: none;
-    }
-    @media (max-width: 768px) {
-      .navbar-toggle {
-        display: block;
-      }
-      .navbar-links {
-        display: none;
-      }
-      .navbar-links.active {
-        display: block;
-      }
-      .navbar-links {
-        position: absolute;
-        background-color: #000;
-        width: 100%;
-        top: 60px;
-        left: 0;
-        z-index: 999;
-      }
-      .navbar-links a {
-        display: block;
-        padding: 15px;
-        color: #fff;
-      }
-      .navbar-links a:hover {
-        background-color: #4a4a4a;
-      }
-    }
-
-    .relative:hover .absolute {
-  display: block;
-}
-
-.absolute {
-  z-index: 10;
-}
-  </style>
+  <link rel="stylesheet" href="../Style/Index.css">
 </head>
 <body class="bg-gray-100">
 
@@ -358,59 +295,8 @@
       </div>
     </div>
   </footer>
-  
-  
-  
 
+  <script src="../JS/Index.js"></script>
 
-  <script>
-    let slideIndex = 0;
-    const slides = document.querySelector('.carousel-slide');
-
-    function nextSlide() {
-      slideIndex++;
-      if (slideIndex >= slides.children.length) {
-        slideIndex = 0;
-      }
-      showSlide(slideIndex);
-    }
-
-    function prevSlide() {
-      slideIndex--;
-      if (slideIndex < 0) {
-        slideIndex = slides.children.length - 1;
-      }
-      showSlide(slideIndex);
-    }
-
-    function showSlide(index) {
-      slides.style.transform = `translateX(-${index * (100 / slides.children.length)}%)`; /* Desplazar las imágenes horizontalmente */
-    }
-
-    setInterval(nextSlide, 3000); // Cambia la imagen cada 3 segundos
-
-  const menuToggle = document.getElementById('menu-toggle');
-  const navbarLinks = document.querySelector('.navbar-links');
-  const dropdownMenu = document.querySelector('.navbar-links .absolute');
-
-  menuToggle.addEventListener('click', () => {
-    navbarLinks.classList.toggle('active');
-  });
-
-  // Mostrar el menú desplegable al pasar el cursor sobre el enlace "Productos"
-  document.querySelector('.navbar-links a[href="#"]').addEventListener('mouseenter', () => {
-    dropdownMenu.style.display = 'block';
-  });
-
-  // Ocultar el menú desplegable cuando se sale del enlace "Productos" o del menú desplegable
-  document.querySelector('.navbar-links').addEventListener('mouseleave', () => {
-    dropdownMenu.style.display = 'none';
-  });
-
-  dropdownMenu.addEventListener('mouseleave', () => {
-    dropdownMenu.style.display = 'none';
-  });
-
-  </script>
 </body>
 </html>

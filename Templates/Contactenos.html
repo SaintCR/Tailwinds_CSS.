@@ -7,53 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <link rel="icon" href="../Img/584292c4a6515b1e0ad75aca.png">
-  <style>
-    /* Personalización de estilos para la marca Jordan */
-    .nav-brand {
-      font-family: 'Arial Black', sans-serif;
-      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    }
-    .footer-text {
-      font-family: 'Arial', sans-serif;
-    }
-    /* Estilos adicionales para resaltar campos del formulario */
-    input:focus, textarea:focus {
-      border-color: #4299e1 !important;
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
-    }
-    /* Estilos para el botón de menú desplegable */
-    .navbar-toggle {
-      display: none;
-    }
-    @media (max-width: 768px) {
-      .navbar-toggle {
-        display: block;
-      }
-      .navbar-links {
-        display: none;
-      }
-      .navbar-links.active {
-        display: block;
-      }
-      .navbar-links {
-        position: absolute;
-        background-color: #000;
-        width: 100%;
-        top: 60px;
-        left: 0;
-        z-index: 999;
-      }
-      .navbar-links a {
-        display: block;
-        padding: 15px;
-        color: #fff;
-      }
-      .navbar-links a:hover {
-        background-color: #4a4a4a;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="../Style/Contactenos.css">
 </head>
 <body class="bg-gray-100">
 
@@ -154,15 +108,7 @@
     </div>
   </footer>
 
-  <!-- Script para mostrar/ocultar menú desplegable en pantallas pequeñas -->
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navbarLinks = document.querySelector('.navbar-links');
-
-    menuToggle.addEventListener('click', () => {
-      navbarLinks.classList.toggle('active');
-    });
-  </script>
+  <script src="../JS/Lista_Despegable_Pant_Pequeñas.js"></script>
 
 </body>
 </html>

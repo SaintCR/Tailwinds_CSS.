@@ -1,0 +1,62 @@
+    /* Personalización de estilos para la marca Jordan */
+    .nav-brand {
+        font-family: 'Arial Black', sans-serif;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+      }
+      .footer-text {
+        font-family: 'Arial', sans-serif;
+      }
+      /* Estilo para el carrusel */
+      .carousel-container {
+        position: relative;
+        width: 100%; /* Ancho completo del contenedor */
+        overflow: hidden;
+      }
+      .carousel-slide {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 300%; /* Ancho del contenedor igual a 300% del ancho de una imagen */
+      }
+      .carousel-slide img {
+        width: 100%; /* Tamaño completo de la imagen */
+        height: auto;
+      }
+  
+      .navbar-toggle {
+        display: none;
+      }
+      @media (max-width: 768px) {
+        .navbar-toggle {
+          display: block;
+        }
+        .navbar-links {
+          display: none;
+        }
+        .navbar-links.active {
+          display: block;
+        }
+        .navbar-links {
+          position: absolute;
+          background-color: #000;
+          width: 100%;
+          top: 60px;
+          left: 0;
+          z-index: 999;
+        }
+        .navbar-links a {
+          display: block;
+          padding: 15px;
+          color: #fff;
+        }
+        .navbar-links a:hover {
+          background-color: #4a4a4a;
+        }
+      }
+  
+      .relative:hover .absolute {
+    display: block;
+  }
+  
+  .absolute {
+    z-index: 10;
+  }

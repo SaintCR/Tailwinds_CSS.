@@ -1,0 +1,45 @@
+   /* Personalización de estilos para la marca Jordan */
+   .nav-brand {
+    font-family: 'Arial Black', sans-serif;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+  .footer-text {
+    font-family: 'Arial', sans-serif;
+  }
+  /* Estilos adicionales para resaltar campos del formulario */
+  input:focus, textarea:focus {
+    border-color: #4299e1 !important;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  }
+  /* Estilos para el botón de menú desplegable */
+  .navbar-toggle {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .navbar-toggle {
+      display: block;
+    }
+    .navbar-links {
+      display: none;
+    }
+    .navbar-links.active {
+      display: block;
+    }
+    .navbar-links {
+      position: absolute;
+      background-color: #000;
+      width: 100%;
+      top: 60px;
+      left: 0;
+      z-index: 999;
+    }
+    .navbar-links a {
+      display: block;
+      padding: 15px;
+      color: #fff;
+    }
+    .navbar-links a:hover {
+      background-color: #4a4a4a;
+    }
+  }
