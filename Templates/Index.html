@@ -62,6 +62,14 @@
         background-color: #4a4a4a;
       }
     }
+
+    .relative:hover .absolute {
+  display: block;
+}
+
+.absolute {
+  z-index: 10;
+}
   </style>
 </head>
 <body class="bg-gray-100">
@@ -81,7 +89,14 @@
       <!-- Enlaces de la barra de navegación -->
       <div class="navbar-links hidden md:flex md:items-center">
         <a href="Index.html" class="text-gray-300 hover:text-white px-3 py-2">Inicio</a>
-        <a href="#" class="text-gray-300 hover:text-white px-3 py-2">Productos</a>
+        <div class="relative">
+          <a href="#" class="text-gray-300 hover:text-white">Productos</a>
+          <div class="absolute hidden bg-black text-white p-2 mt-2 w-48 rounded-lg shadow-md">
+            <a href="#productos-destacados" class="block py-2 px-4 hover:bg-gray-800">Productos Destacados</a>
+            <a href="#productos-hombre" class="block py-2 px-4 hover:bg-gray-800">Productos para Hombres</a>
+            <a href="#productos-mujer" class="block py-2 px-4 hover:bg-gray-800">Productos para Mujeres</a>
+          </div>
+        </div>        
         <a href="Contactenos.html" class="text-gray-300 hover:text-white px-3 py-2">Contacto</a>
         <a href="Soporte_Tecnico.html" class="text-gray-300 hover:text-white px-3 py-2">Soporte Tecnico</a>
         <a href="Formulario.html" class="text-gray-300 hover:text-white px-3 py-2">Registro</a>
@@ -96,8 +111,6 @@
       <a href="Formulario.html" class="block text-gray-300 hover:text-white px-4 py-2">Registro</a>
     </div>
   </nav>
-
-
   <!-- Carrusel de imágenes de artículos deportivos -->
   <div class="relative bg-gray-300 py-16">
     <div class="carousel-container max-w-xl mx-auto">
@@ -114,7 +127,7 @@
 
   <!-- Contenido de productos destacados -->
   <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-    <h1 class="text-3xl font-semibold text-gray-800 mb-8">Productos Destacados</h1>
+    <h1 class="text-3xl font-semibold text-gray-800 mb-8" id="productos-destacados">Productos Destacados</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Tarjeta de producto -->
       <div class="bg-white shadow-md rounded-lg overflow-hidden">
@@ -163,7 +176,7 @@
   </div>
 
   <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-    <h1 class="text-3xl font-semibold text-gray-800 mb-8">Productos para Hombres</h1>
+    <h1 class="text-3xl font-semibold text-gray-800 mb-8" id="productos-hombre">Productos para Hombres</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Tarjeta de producto para hombres -->
       <div class="bg-white shadow-md rounded-lg overflow-hidden">
@@ -250,7 +263,7 @@
   </div>
 
   <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-    <h1 class="text-3xl font-semibold text-gray-800 mb-8">Productos para Mujer</h1>
+    <h1 class="text-3xl font-semibold text-gray-800 mb-8" id="productos-mujer">Productos para Mujer</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Tarjeta de producto para mujeres -->
       <div class="bg-white shadow-md rounded-lg overflow-hidden">
@@ -376,12 +389,28 @@
 
     setInterval(nextSlide, 3000); // Cambia la imagen cada 3 segundos
 
-    const menuToggle = document.getElementById('menu-toggle');
-    const navbarLinks = document.querySelector('.navbar-links');
+  const menuToggle = document.getElementById('menu-toggle');
+  const navbarLinks = document.querySelector('.navbar-links');
+  const dropdownMenu = document.querySelector('.navbar-links .absolute');
 
-    menuToggle.addEventListener('click', () => {
-      navbarLinks.classList.toggle('active');
-    });
+  menuToggle.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active');
+  });
+
+  // Mostrar el menú desplegable al pasar el cursor sobre el enlace "Productos"
+  document.querySelector('.navbar-links a[href="#"]').addEventListener('mouseenter', () => {
+    dropdownMenu.style.display = 'block';
+  });
+
+  // Ocultar el menú desplegable cuando se sale del enlace "Productos" o del menú desplegable
+  document.querySelector('.navbar-links').addEventListener('mouseleave', () => {
+    dropdownMenu.style.display = 'none';
+  });
+
+  dropdownMenu.addEventListener('mouseleave', () => {
+    dropdownMenu.style.display = 'none';
+  });
+
   </script>
 </body>
 </html>
