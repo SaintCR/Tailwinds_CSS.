@@ -31,24 +31,72 @@
       width: 100%; /* Tamaño completo de la imagen */
       height: auto;
     }
+
+    .navbar-toggle {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .navbar-toggle {
+        display: block;
+      }
+      .navbar-links {
+        display: none;
+      }
+      .navbar-links.active {
+        display: block;
+      }
+      .navbar-links {
+        position: absolute;
+        background-color: #000;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        z-index: 999;
+      }
+      .navbar-links a {
+        display: block;
+        padding: 15px;
+        color: #fff;
+      }
+      .navbar-links a:hover {
+        background-color: #4a4a4a;
+      }
+    }
   </style>
 </head>
 <body class="bg-gray-100">
 
   <!-- Barra de navegación -->
   <nav class="bg-black py-4">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center relative">
       <div>
-        <a href="#" class="text-white text-2xl font-semibold nav-brand">Jordan</a>
+        <a href="Index.html" class="text-white text-2xl font-semibold nav-brand">Jordan</a>
       </div>
-      <div>
+      <!-- Botón de menú desplegable para pantallas pequeñas -->
+      <div class="navbar-toggle">
+        <button id="menu-toggle" class="text-white hover:text-gray-300 focus:outline-none focus:text-gray-300">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <!-- Enlaces de la barra de navegación -->
+      <div class="navbar-links hidden md:flex md:items-center">
         <a href="Index.html" class="text-gray-300 hover:text-white px-3 py-2">Inicio</a>
         <a href="#" class="text-gray-300 hover:text-white px-3 py-2">Productos</a>
         <a href="Contactenos.html" class="text-gray-300 hover:text-white px-3 py-2">Contacto</a>
+        <a href="Soporte_Tecnico.html" class="text-gray-300 hover:text-white px-3 py-2">Soporte Tecnico</a>
         <a href="Formulario.html" class="text-gray-300 hover:text-white px-3 py-2">Registro</a>
       </div>
     </div>
+    <!-- Menú desplegable para pantallas pequeñas -->
+    <div class="navbar-links md:hidden">
+      <a href="Index.html" class="block text-gray-300 hover:text-white px-4 py-2">Inicio</a>
+      <a href="#" class="block text-gray-300 hover:text-white px-4 py-2">Productos</a>
+      <a href="Contactenos.html" class="block text-gray-300 hover:text-white px-4 py-2">Contacto</a>
+      <a href="Soporte_Tecnico.html" class="block text-gray-300 hover:text-white px-4 py-2">Soporte Tecnico</a>
+      <a href="Formulario.html" class="block text-gray-300 hover:text-white px-4 py-2">Registro</a>
+    </div>
   </nav>
+
 
   <!-- Carrusel de imágenes de artículos deportivos -->
   <div class="relative bg-gray-300 py-16">
@@ -327,6 +375,13 @@
     }
 
     setInterval(nextSlide, 3000); // Cambia la imagen cada 3 segundos
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbarLinks = document.querySelector('.navbar-links');
+
+    menuToggle.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active');
+    });
   </script>
 </body>
 </html>

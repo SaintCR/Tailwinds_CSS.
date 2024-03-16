@@ -16,6 +16,32 @@
     .footer-text {
       font-family: 'Arial', sans-serif;
     }
+    /* Estilos para la barra de navegación */
+    .navbar-links {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 56px; /* altura de la barra de navegación */
+      left: 0;
+      right: 0;
+      background-color: #000;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+    .navbar-links.active {
+      display: flex;
+    }
+    .navbar-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 0;
+    }
+    @media (max-width: 768px) {
+      .navbar-links {
+        top: 64px; /* ajuste para cuando el menú de hamburguesa está visible */
+      }
+    }
   </style>
 </head>
 <body class="bg-gray-100">
@@ -24,14 +50,20 @@
   <nav class="bg-black py-4">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
       <div>
-        <a href="#" class="text-white text-2xl font-semibold nav-brand">Jordan</a>
+        <a href="Index.html" class="text-white text-2xl font-semibold nav-brand">Jordan</a>
       </div>
       <div>
-        <a href="Index.html" class="text-gray-300 hover:text-white px-3 py-2">Inicio</a>
-        <a href="InformacionLegal.html" class="text-gray-300 hover:text-white px-3 py-2">Información Legal</a>
-        <a href="Contactenos.html" class="text-gray-300 hover:text-white px-3 py-2">Contacto</a>
-        <a href="Formulario.html" class="text-gray-300 hover:text-white px-3 py-2">Registro</a>
+        <button id="menu-toggle" class="text-gray-300 hover:text-white focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
+    </div>
+    <!-- Enlaces de la barra de navegación -->
+    <div class="navbar-links" id="navbar-links">
+      <a href="Index.html" class="text-gray-300 hover:text-white">Inicio</a>
+      <a href="InformacionLegal.html" class="text-gray-300 hover:text-white">Información Legal</a>
+      <a href="Contactenos.html" class="text-gray-300 hover:text-white">Contacto</a>
+      <a href="Formulario.html" class="text-gray-300 hover:text-white">Registro</a>
     </div>
   </nav>
 
@@ -100,6 +132,16 @@
       </div>
     </div>
   </footer>
+
+  <!-- Script para mostrar/ocultar menú desplegable en pantallas pequeñas -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbarLinks = document.getElementById('navbar-links');
+
+    menuToggle.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
