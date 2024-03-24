@@ -26,37 +26,45 @@
         </div>
     </header>
 
-    <br>    
+    <br><br>
 
-    <main class="container mx-auto flex">
-        <div class="w-1/2 mr-2">
-            <iframe width="630" height="370" src="https://www.youtube.com/embed/2NuGuBpP5fo" title="YouTube video" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="w-1/2 ml-2">
-            <div class="grid grid-cols-1 gap-4">
-                <iframe width="260" height="140" src="https://www.youtube.com/embed/h5HQVHTpeHs" title="YouTube video" frameborder="0" allowfullscreen></iframe>
-                <iframe width="260" height="140" src="https://www.youtube.com/embed/MJkdaVFHrto" title="YouTube video" frameborder="0" allowfullscreen></iframe>
-                <iframe width="260" height="140" src="https://www.youtube.com/embed/q0UgClC8md4" title="YouTube video" frameborder="0" allowfullscreen></iframe>
-            </div>
+    <main class="container mx-auto flex flex-col lg:flex-row items-start justify-center">
+        <!-- Video Principal -->
+        <div class="w-full lg:w-1/3 mb-4 lg:mb-0 lg:order-1">
+            <iframe class="w-full" height="370" src="https://www.youtube.com/embed/2NuGuBpP5fo" title="YouTube video" frameborder="0" allowfullscreen></iframe>
         </div>
     
-        <div class="square-popup bg-gradient-to-br from-purple-400 to-indigo-600 rounded-lg shadow-lg p-6 ml-2">
-            <div class="popup-content">
-                <h2 class="text-2xl font-semibold mb-4 text-white text-center">¡Suscríbete para recibir actualizaciones!</h2>
-                <br>
-                <form action="#" method="POST">
-                    <div class="mb-6">
-                        <label for="email" class="block text-sm font-medium text-white">Correo electrónico:</label>
-                        <input type="email" id="email" name="email" class="mt-1 p-3 block w-full rounded-md bg-white bg-opacity-25 border border-transparent focus:ring-indigo-500 focus:border-indigo-500">
-                    </div>
-                    <br><br>
-                    <div class="text-center">
-                        <button type="submit" class="bg-white text-indigo-600 px-6 py-3 rounded-md hover:bg-indigo-100">Suscribirse</button>
-                    </div>
-                </form>
+        <!-- Videos en fila vertical -->
+        <div class="w-full lg:w-1/3 lg:order-2 lg:ml-2 mb-4 lg:mb-0">
+            <iframe class="w-220 mb-4" height="200" src="https://www.youtube.com/embed/h5HQVHTpeHs" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+            <iframe class="w-220 mb-4" height="200" src="https://www.youtube.com/embed/MJkdaVFHrto" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+            <iframe class="w-220 mb-4" height="200" src="https://www.youtube.com/embed/q0UgClC8md4" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <!-- Pop-up -->
+        <div class="w-full lg:w-1/3 mb-4 lg:mb-0 lg:order-3 lg:ml-2">
+            <div class="square-popup bg-gradient-to-br from-purple-400 to-indigo-600 rounded-lg shadow-lg p-6">
+                <div class="popup-content">
+                    <h2 class="text-2xl font-semibold mb-4 text-white text-center">¡Suscríbete para recibir actualizaciones!</h2>
+                    <form action="#" method="POST">
+                        <div class="mb-6">
+                            <label for="email" class="block text-sm font-medium text-white">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" class="mt-1 p-3 block w-full rounded-md bg-white bg-opacity-25 border border-transparent focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-white text-indigo-600 px-6 py-3 rounded-md hover:bg-indigo-100">Suscribirse</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </main>
+    
+    
+    
+    
+    
+    
+    
 
     <br><br><br><br>
 
