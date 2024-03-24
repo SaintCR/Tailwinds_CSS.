@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex-shrink-0">
+                <a href="Youtube.html"><img src="../../Img/Youtube-removebg-preview.png" alt="YouTube" class="h-10"></a>
+            </div>
+            <div class="flex-1 mx-4 flex justify-center"> 
+                <div class="relative w-2/3">
+                    <input type="text" placeholder="Buscar" class="py-2 pl-6 pr-4 w-full rounded-full bg-gray-100 focus:outline-none focus:bg-white border border-gray-500"> <!-- Cambio aquí: agregué 'border border-gray-300' para el delineado -->
+                    <i class="bi bi-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+                </div>
+            </div>
+            
+            <div>
+                <button class="btn btn-outline-light me-4 px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-800">Crear cuenta</button>
+                <button class="btn btn-primary px-4 py-2 rounded-full bg-red-500 hover:bg-red-600 text-white">Iniciar sesión</button>
+            </div>
+        </div>
+    </header>
+    <br><br>
+    <main class="container mx-auto flex">
+        <!-- Video Principal -->
+        <div class="w-1/2 mr-2">
+            <iframe width="520" height="300" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <!-- Más Videos -->
+        <div class="w-3/4 ml-5">
+            <div class="grid grid-cols-1 gap-4">
+                <!-- Video 1 -->
+                <iframe width="240" height="100" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+                <!-- Video 2 -->
+                <iframe width="240" height="100" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+                <!-- Video 3 -->
+                <iframe width="240" height="100" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+    
+    
+    
+    
+    
+    
+    
+<footer class="py-3 mt-5">
+    <p class="text-center text-gray-400">YouTube es una marca comercial de YouTube.com</p>
+</footer>
+</body>
+</html>
